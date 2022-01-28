@@ -30,5 +30,5 @@ for m in models:
     print("Model: " + str(m))
     print(y_pred)
     print("r2: " + str(r2))
-    print("MER: " + str(mean_absolute_percentage_error(y_test, y_pred)))
+    print("MEPR: " + str(mean_absolute_percentage_error(y_test, y_pred)) + "%")
     print("-"*80)
