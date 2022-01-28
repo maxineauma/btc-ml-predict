@@ -25,10 +25,13 @@ for m in models:
 
     r2 = r2_score(y_test, y_pred)
     res = pd.crosstab(y_test, y_pred, rownames=['Actual'], colnames=['Predicted'])
+    mepr = mean_absolute_percentage_error(y_test, y_pred)
 
     print("-"*80)
     print("Model: " + str(m))
     print(y_pred)
     print("r2: " + str(r2))
-    print("MEPR: " + str(mean_absolute_percentage_error(y_test, y_pred)) + "%")
+    print("MEPR: " + str(mepr) + "%")
+    print("confusion matrix: ")
+    print(res)
     print("-"*80)
